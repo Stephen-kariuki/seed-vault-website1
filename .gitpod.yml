@@ -1,0 +1,18 @@
+# .gitpod.yml
+image: gitpod/workspace-full:latest
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: docker-compose up --build
+  - init: pip install -r backend/requirements.txt && npm install --prefix frontend
+  - command: npm start --prefix frontend
+  - command: python3 backend/manage.py runserver 0.0.0.0:8000
+
+ports:
+  - port: 8000
+    onOpen: open-preview
+  - port: 3000
+    onOpen: open-preview
+
+
+# .gitpod.yml

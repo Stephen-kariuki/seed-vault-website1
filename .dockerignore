@@ -1,0 +1,22 @@
+
+*.pyo
+*.pyd
+.env
+.git
+node_modules
+/static
+/media
+
+# Python
+*.pyc
+__pycache__/
+
+# Node
+node_modules/
+
+# Django
+db.sqlite3
+
+# Git
+.git
+.gitignore
